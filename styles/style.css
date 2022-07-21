@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     font-family: 'Poppins', sans-serif;
     padding: 0;
@@ -104,23 +109,14 @@ body {
 
 #blog {
     display: grid;
-    grid-template-columns: repeat(3, 24px);
-    grid-template-rows: 24px;
-    column-gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
 }
 
 .blog-content {
     width: 312px;
-    height: 362px;
 }
 
-#blog {
-    display: grid;
-    height: 100px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 500px;
-    column-gap: 18px;
-}
 
 #blog>div {
     border: 1px solid grey;
@@ -128,21 +124,12 @@ body {
 
 
 /* footer starts from here */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 body{
     background: #FFFFFF;
 }
 footer{
-    position:absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
     background: black;
-    height: auto;
     width: 100vw;
     font-family: open sans;
     padding-top: 40px;
@@ -155,13 +142,13 @@ footer{
     flex-direction: column;
     text-align: center;
 }
-.footer-content h2{
+.footer-content >h2{
     font-size: 1.8rem;
     font-weight: 400;
     text-transform: capitalize;
     line-height: 3rem;
 }
-.footer-content p{
+.footer-content >p{
     max-width: 500px;
     margin: 10px auto;
     line-height: 28px;
@@ -169,28 +156,25 @@ footer{
 
 
 }
-.socials{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0 3rem 0;
-}
-.socials li{
-    margin: 0 10px;
-
-}
-.socials a{
-    text-decoration: none;
+.social_icon> a>i{
     color: #fff;
-}
-.socials a i{
-    font-size: 1.1rem;
-    transition: color .4s ease;
-}
-.socials a:hover i{
-    color: aqua;
-}
+  }
+  .social_icon {
+    text-align: center;
+  }
+  .social_icon > a>i {
+    padding: 12px 14px;
+    background-color: transparent;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .social_icon > a>i:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.769);
+  }
+  .social_icon >a> i:last-child {
+    margin-right: 0;
+  }
 .footer-bottom{
     background: #000;
     width: 100vw;
